@@ -1,0 +1,29 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+flake8 = "*"
+black = "*"
+isort = "*"
+pytest-cov = "*"
+pre-commit = "*"
+
+[packages]
+flask = "*"
+loguru = "*"
+black = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+lint = "flake8"
+tests = "python -m pytest tests"
+coverage = "python -m pytest --cov --cov-fail-under=100"
+hooks = "pre-commit install -t pre-commit"
+
+[pipenv]
+allow_prereleases = true
