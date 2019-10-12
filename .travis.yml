@@ -7,6 +7,6 @@ matrix:
     sudo: true
 install:
   - pip install pipenv
-  - pipenv install
+  - pipenv install --ignore-pipfile
 script:
     - pipenv run tests
