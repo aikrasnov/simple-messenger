@@ -10,19 +10,23 @@ black = "*"
 isort = "*"
 pytest-cov = "*"
 pre-commit = "*"
+requests-mock = "*"
 
 [packages]
 flask = "*"
 loguru = "*"
-black = "*"
+requests = "*"
+jsonschema = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.7"
 
 [scripts]
-lint = "flake8"
+server = "flask run"
+lint = "bash lint.sh"
 tests = "python -m pytest tests"
-coverage = "python -m pytest --cov --cov-fail-under=100"
+coverage = "python -m pytest --cov --cov-report term-missing --cov-fail-under=100"
 hooks = "pre-commit install -t pre-commit"
 
 [pipenv]

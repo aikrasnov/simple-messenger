@@ -4,21 +4,21 @@ repos:
   - id: isort
     name: isort
     stages: [commit]
-    language: system
+    language: python
     entry: pipenv run isort
     types: [python]
 
   - id: black
     name: black
     stages: [commit]
-    language: system
+    language: python
     entry: pipenv run black
     types: [python]
 
-  - id: flake8
-    name: flake8
+  - id: linter
+    name: linter
     stages: [commit]
-    language: system
+    language: python
     entry: pipenv run flake8
     types: [python]
     exclude: setup.py
@@ -26,14 +26,14 @@ repos:
   - id: pytest
     name: pytest
     stages: [commit]
-    language: system
+    language: python
     entry: pipenv run tests
     types: [python]
 
   - id: pytest-cov
     name: pytest
     stages: [push]
-    language: system
+    language: python
     entry: pipenv run coverage
     types: [python]
     pass_filenames: false
