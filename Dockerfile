@@ -7,4 +7,6 @@ COPY . ./app
 WORKDIR ./app
 RUN pip install --no-cache-dir pipenv && \
     python --version && \
-    pipenv install --ignore-pipfile && \
+    pipenv install --ignore-pipfile
+
+CMD ["pipenv", "run", "server"]
