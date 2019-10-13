@@ -13,5 +13,3 @@ script:
   - codecov
 after_success:
   - bash ./scripts/docker_push.sh
-  on:
-    branch: master
