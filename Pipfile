@@ -11,6 +11,7 @@ isort = "*"
 pytest-cov = "*"
 pre-commit = "*"
 requests-mock = "*"
+codecov = "*"
 
 [packages]
 flask = "*"

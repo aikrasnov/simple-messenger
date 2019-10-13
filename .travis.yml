@@ -8,3 +8,5 @@ install:
   - pipenv install --ignore-pipfile
 script:
   - pipenv run tests
+after_success:
+  - codecov
