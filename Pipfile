@@ -12,19 +12,22 @@ pytest-cov = "*"
 pre-commit = "*"
 requests-mock = "*"
 codecov = "*"
+python-dotenv = "*"
+
 
 [packages]
 flask = "*"
 loguru = "*"
 requests = "*"
 jsonschema = "*"
-python-dotenv = "*"
+gevent = "*"
 
 [requires]
 python_version = "3.7"
 
 [scripts]
-server = "flask run"
+server = "python server.py"
+dev_server = "flask run --reload"
 lint = "bash lint.sh"
 tests = "python -m pytest tests"
 coverage = "python -m pytest --cov --cov-report term-missing --cov-fail-under=100"

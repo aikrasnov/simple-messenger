@@ -1,7 +1,7 @@
 import pytest
 import requests_mock
 
-from src.routes.messages import message_app
+from server import message_app
 
 
 @pytest.fixture
