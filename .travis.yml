@@ -5,7 +5,6 @@ sudo: true
 install:
   - pip install pipenv
   - pipenv install --dev --ignore-pipfile
-  - pipenv install --ignore-pipfile
 script:
   - pipenv run coverage
 after_success:
