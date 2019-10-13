@@ -7,6 +7,6 @@ install:
   - pipenv install --dev --ignore-pipfile
   - pipenv install --ignore-pipfile
 script:
-  - pipenv run tests
+  - pipenv run coverage
 after_success:
   - codecov
