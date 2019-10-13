@@ -1,11 +1,17 @@
 language: python
 python: 3.7
 dist: xenial
-sudo: true
+sudo: required
+services:
+  - docker
 install:
   - pip install pipenv
   - pipenv install --dev --ignore-pipfile
+stage: run tests
 script:
   - pipenv run coverage
-after_success:
   - codecov
+after_success:
+  - bash ./scripts/docker_push.sh
+  on:
+    branch: master

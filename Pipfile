@@ -28,7 +28,7 @@ python_version = "3.7"
 [scripts]
 server = "python server.py"
 dev_server = "flask run --reload"
-lint = "bash lint.sh"
+lint = "bash ./scripts/lint.sh"
 tests = "python -m pytest tests"
 coverage = "python -m pytest --cov --cov-report term-missing --cov-fail-under=100"
 hooks = "pre-commit install -t pre-commit"
