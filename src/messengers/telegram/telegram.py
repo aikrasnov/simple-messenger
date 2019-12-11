@@ -22,7 +22,7 @@ class Telegram(BaseMessanger):
         "required": ["text", "bot_token", "chat_id"],
         "properties": {
             "text": {"type": "string"},
-            "bot_token": {"type": "string", "pattern": "^[0-9A-Za-z:]+$"},
+            "bot_token": {"type": "string", "pattern": "^[0-9A-Za-z:_]+$"},
             "chat_id": {"type": "number"},
             "parse_mode": {
                 "type": "string",
